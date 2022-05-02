@@ -1,0 +1,15 @@
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.post__image {
+  width: 400px;
+  height: 400px;
+  background-color: #141414;
+}
+
+.post__caption {
+  padding: 24px;
+}
