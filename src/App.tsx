@@ -1,9 +1,12 @@
+import Post from './components/Post/Post.component';
+
 const App = (): JSX.Element =>
   (
     <div className="app">
-      <h1>Initial Commit</h1>
       <header className="app__header">
+        <div className="app__header__image"></div>
       </header>
+      <Post />
     </div>
   );
 
