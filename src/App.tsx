@@ -1,17 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { onSnapshot, collection } from 'firebase/firestore';
 
 import Post from './components/Post/Post.component';
+
+import { db } from './firebase/firebase';
 
 import { PostType } from './types/postTypes';
 
 const App = (): JSX.Element => {
-  const [posts, setPosts] = useState<PostType[]>([
-    { username: 'user.name1', imageUrl: '/assets/img/burger.png', caption: 'My great caption.' },
-    { username: 'user.name1', imageUrl: '/assets/img/burger.png', caption: 'My great caption.' },
-    { username: 'user.name1', imageUrl: '/assets/img/burger.png', caption: 'My great caption.' },
-    { username: 'user.name1', imageUrl: '/assets/img/burger.png', caption: 'My great caption.' },
-    { username: 'user.name1', imageUrl: '/assets/img/burger.png', caption: 'My great caption.' },
-  ]);
+  const [posts, setPosts] = useState<PostType[]>([]);
+
+  useEffect(() => {
+    onSnapshot(collection(db, 'posts'), snapshot => {
+      snapshot.docs.forEach(
+        doc => setPosts([...posts, doc.data() as PostType])  
+      );
+    });
+  }, []);
 
   return (
     <div className="app">
