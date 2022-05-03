@@ -2,11 +2,9 @@ import { Avatar } from '@mui/material';
 
 import './Post.styles.css';
 
-type PostProps = {
-  username: string;
-  imageUrl: string;
-  caption: string;
-};
+import { PostType } from '../../types/postTypes';
+
+type PostProps = PostType;
 
 const Post = ({ username, imageUrl, caption }: PostProps): JSX.Element =>
   (
