@@ -6,7 +6,33 @@ const App = (): JSX.Element =>
       <header className="app__header">
         <div className="app__header__image"></div>
       </header>
-      <Post />
+      <div className="app__content">
+        <Post
+          username="user.name1"
+          imageUrl="/assets/img/burger.png"
+          caption="My caption!"
+        />
+        <Post
+          username="user.name1"
+          imageUrl="/assets/img/burger.png"
+          caption="My caption!"
+        />
+        <Post
+          username="user.name1"
+          imageUrl="/assets/img/burger.png"
+          caption="My caption!"
+        />
+        <Post
+          username="user.name1"
+          imageUrl="/assets/img/burger.png"
+          caption="My caption!"
+        />
+        <Post
+          username="user.name1"
+          imageUrl="/assets/img/burger.png"
+          caption="My caption!"
+        />
+      </div>
     </div>
   );
 

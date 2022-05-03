@@ -16,3 +16,7 @@
   height: 32px;
   background-color: #141414;
 }
+
+.app__content {
+  padding: 24px;
+}

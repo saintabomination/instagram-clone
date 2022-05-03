@@ -1,15 +1,30 @@
 .post {
   display: flex;
   flex-direction: column;
+  margin-bottom: 32px;
+  width: 400px;
 }
 
+.post__header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  border-bottom: none;
+}
+
+.post__header .post__avatar {
+  margin-right: 12px;
+  width: 32px;
+  height: 32px;
+}
 
 .post__image {
-  width: 400px;
-  height: 400px;
-  background-color: #141414;
+  object-cover: contain;
 }
 
 .post__caption {
   padding: 24px;
+  border: 1px solid #d9d9d9;
+  border-top: none;
 }
